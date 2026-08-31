@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/neutral.css';
+@import 'fumadocs-ui/css/preset.css';
+
+html, body { min-height: 100%; }
+body { margin: 0; }
