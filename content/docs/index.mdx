@@ -1,0 +1,26 @@
+---
+title: AI Documentation
+description: Minimal Fumadocs documentation with a resilient free AI assistant
+---
+
+# AI Documentation
+
+A minimal Fumadocs site with the Flux layout, native dark/light theme, document search, AI-readable endpoints, and a free-model AI assistant.
+
+## AI assistant
+
+The assistant uses OpenRouter's `openrouter/free` router by default. If no key is configured, or a provider request fails, the application returns a safe fallback instead of hanging.
+
+## Search
+
+Fumadocs' native ZBSearch is enabled and requires no paid search service. If you already have Orama Cloud, it can be wired in later without changing the documentation structure.
+
+## AI-readable docs
+
+- `/llms.txt` provides a compact index.
+- `/llms-full.txt` provides the full processed documentation.
+- `/docs/<path>.md` exposes individual documentation as Markdown.
+
+## Configuration
+
+Copy `.env.example` to `.env.local` and set `OPENROUTER_API_KEY`. Optionally set `AI_MODEL` or `AI_BASE_URL`.
