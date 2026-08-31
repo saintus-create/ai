@@ -1,0 +1,16 @@
+import { getLLMText } from '@/lib/get-llm-text';
+import { source } from '@/lib/source';
+import { notFound } from 'next/navigation';
+
+export const revalidate = false;
+
+export async function GET(_request: Request, context: RouteContext<'/llms.mdx/docs/[[...slug]]'>) {
+  const { slug } = await context.params;
+  const page = source.getPage(slug);
+  if (!page) notFound();
+  return new Response(await getLLMText(page), { headers: { 'content-type': 'text/markdown; charset=utf-8' } });
+}
+
+export function generateStaticParams() {
+  return source.generateParams();
+}
