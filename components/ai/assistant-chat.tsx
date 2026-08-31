@@ -1,10 +1,7 @@
 "use client";
 
-import {
-  AssistantRuntimeProvider,
-  useChatRuntime,
-  AssistantChatTransport,
-} from "@assistant-ui/react";
+import { AssistantRuntimeProvider } from "@assistant-ui/react";
+import { useChatRuntime, AssistantChatTransport } from "@assistant-ui/ai-sdk";
 import { Thread } from "@/components/assistant-ui/elements/thread.aui";
 import {
   Dialog,
