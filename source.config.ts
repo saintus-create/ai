@@ -1,0 +1,9 @@
+import { defineDocs, defineConfig } from 'fumadocs-mdx/config';
+
+export const docs = defineDocs({
+  docs: {
+    postprocess: { includeProcessedMarkdown: true },
+  },
+});
+
+export default defineConfig({});
